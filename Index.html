@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnHub</title>
+
+<style>
+:root{
+  --bg1:#0f172a;
+  --bg2:#111827;
+  --card:rgba(255,255,255,0.06);
+  --text:#ffffff;
+  --accent:#4f7cff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:system-ui;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  color:var(--text);
+  min-height:100vh;
+}
+
+header{
+  padding:30px 20px;
+  text-align:center;
+}
+
+header h1{
+  font-size:48px;
+  font-weight:800;
+}
+
+header p{
+  opacity:.7;
+  margin-top:10px;
+  font-size:18px;
+}
+
+.container{
+  width:100%;
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:22px;
+  padding:22px;
+  backdrop-filter:blur(14px);
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  border-color:var(--accent);
+}
+
+.card h2{
+  margin-bottom:12px;
+  font-size:28px;
+}
+
+.card p{
+  opacity:.8;
+  line-height:1.5;
+  margin-bottom:18px;
+}
+
+button{
+  border:none;
+  padding:12px 18px;
+  border-radius:14px;
+  background:var(--accent);
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.lesson{
+  margin-top:35px;
+  display:none;
+  animation:fade .3s ease;
+}
+
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.lesson-card{
+  background:var(--card);
+  border-radius:22px;
+  padding:25px;
+  margin-bottom:25px;
+}
+
+.lesson-card h3{
+  font-size:30px;
+  margin-bottom:15px;
+}
+
+.lesson-card p{
+  opacity:.85;
+  line-height:1.7;
+  margin-bottom:15px;
+}
+
+pre{
+  background:#00000055;
+  padding:16px;
+  border-radius:16px;
+  overflow:auto;
+  margin-top:10px;
+}
+
+code{
+  color:#7dd3fc;
+  font-size:15px;
+}
+
+.copy-btn{
+  margin-top:12px;
+}
+
+footer{
+  text-align:center;
+  padding:40px 20px;
+  opacity:.6;
+}
+
+@media(max-width:700px){
+
+  header h1{
+    font-size:42px;
+  }
+
+  .card h2{
+    font-size:24px;
+  }
+
+  .lesson-card h3{
+    font-size:26px;
+  }
+
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>💻 LearnHub</h1>
+  <p>Aprende programação grátis no navegador</p>
+</header>
+
+<div class="container">
+
+  <div class="grid">
+
+    <div class="card">
+      <h2>🐍 Python</h2>
+      <p>Aprende variáveis, loops, funções e projetos simples.</p>
+      <button onclick="openLesson('python')">Abrir</button>
+    </div>
+
+    <div class="card">
+      <h2>🌐 HTML</h2>
+      <p>Aprende a criar websites do zero.</p>
+      <button onclick="openLesson('html')">Abrir</button>
+    </div>
+
+    <div class="card">
+      <h2>🎨 CSS</h2>
+      <p>Deixa os teus sites bonitos e responsivos.</p>
+      <button onclick="openLesson('css')">Abrir</button>
+    </div>
+
+    <div class="card">
+      <h2>⚡ JavaScript</h2>
+      <p>Adiciona lógica, animações e interatividade.</p>
+      <button onclick="openLesson('js')">Abrir</button>
+    </div>
+
+  </div>
+
+  <!-- PYTHON -->
+  <div class="lesson" id="python">
+
+    <div class="lesson-card">
+      <h3>🐍 Python Básico</h3>
+      <p>Python é uma linguagem fácil para iniciantes.</p>
+
+<pre><code id="py1">print("Olá mundo")</code></pre>
+
+<button class="copy-btn" onclick="copyCode('py1')">📋 Copiar Código</button>
+    </div>
+
+    <div class="lesson-card">
+      <h3>🔁 Loops</h3>
+      <p>Loops repetem código automaticamente.</p>
+
+<pre><code id="py2">for i in range(5):
+    print(i)</code></pre>
+
+<button class="copy-btn" onclick="copyCode('py2')">📋 Copiar Código</button>
+    </div>
+
+  </div>
+
+  <!-- HTML -->
+  <div class="lesson" id="html">
+
+    <div class="lesson-card">
+      <h3>🌐 HTML Básico</h3>
+      <p>HTML cria a estrutura do website.</p>
+
+<pre><code id="html1">&lt;h1&gt;Olá Mundo&lt;/h1&gt;</code></pre>
+
+<button class="copy-btn" onclick="copyCode('html1')">📋 Copiar Código</button>
+    </div>
+
+  </div>
+
+  <!-- CSS -->
+  <div class="lesson" id="css">
+
+    <div class="lesson-card">
+      <h3>🎨 CSS Básico</h3>
+      <p>CSS muda cores, tamanhos e layouts.</p>
+
+<pre><code id="css1">body{
+  background:black;
+  color:white;
+}</code></pre>
+
+<button class="copy-btn" onclick="copyCode('css1')">📋 Copiar Código</button>
+    </div>
+
+  </div>
+
+  <!-- JS -->
+  <div class="lesson" id="js">
+
+    <div class="lesson-card">
+      <h3>⚡ JavaScript Básico</h3>
+      <p>JavaScript adiciona lógica ao site.</p>
+
+<pre><code id="js1">alert("Olá!")</code></pre>
+
+<button class="copy-btn" onclick="copyCode('js1')">📋 Copiar Código</button>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  🚀 LearnHub • Feito em HTML, CSS e JavaScript
+</footer>
+
+<script>
+
+function openLesson(id){
+
+  const lessons = document.querySelectorAll('.lesson');
+
+  lessons.forEach(l=>{
+    l.style.display = 'none';
+  });
+
+  document.getElementById(id).style.display = 'block';
+
+  window.scrollTo({
+    top:document.getElementById(id).offsetTop - 20,
+    behavior:'smooth'
+  });
+
+}
+
+function copyCode(id){
+
+  const text = document.getElementById(id).innerText;
+
+  navigator.clipboard.writeText(text);
+
+  alert('✅ Código copiado!');
+
+}
+
+</script>
+
+</body>
+  </html>
