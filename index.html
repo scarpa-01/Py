@@ -179,6 +179,12 @@ footer{
   <div class="grid">
 
     <div class="card">
+      <h2>🧠 Lógica</h2>
+      <p>Aprende variáveis, condições e pensamento lógico.</p>
+      <button onclick="openLesson('logic')">Abrir</button>
+    </div>
+
+    <div class="card">
       <h2>🐍 Python</h2>
       <p>Aprende variáveis, loops, funções e projetos simples.</p>
       <button onclick="openLesson('python')">Abrir</button>
@@ -205,6 +211,44 @@ footer{
   </div>
 
   <!-- PYTHON -->
+  <div class="lesson" id="logic">
+
+    <div class="lesson-card">
+      <h3>🧠 Lógica de Programação</h3>
+      <p>A lógica é a base de toda programação. Aprender lógica ajuda-te em qualquer linguagem.</p>
+
+<pre><code id="logic1">Passo 1 → Receber dados
+Passo 2 → Processar
+Passo 3 → Mostrar resultado</code></pre>
+
+<button class="copy-btn" onclick="copyCode('logic1')">📋 Copiar</button>
+    </div>
+
+    <div class="lesson-card">
+      <h3>📦 Variáveis</h3>
+      <p>Variáveis guardam informação.</p>
+
+<pre><code id="logic2">nome = "João"
+idade = 15</code></pre>
+
+<button class="copy-btn" onclick="copyCode('logic2')">📋 Copiar</button>
+    </div>
+
+    <div class="lesson-card">
+      <h3>❓ Condições</h3>
+      <p>Condições permitem tomar decisões.</p>
+
+<pre><code id="logic3">if idade >= 18:
+    print("Adulto")
+else:
+    print("Menor")</code></pre>
+
+<button class="copy-btn" onclick="copyCode('logic3')">📋 Copiar</button>
+    </div>
+
+  </div>
+
+<!-- PYTHON -->
   <div class="lesson" id="python">
 
     <div class="lesson-card">
@@ -226,6 +270,29 @@ footer{
 <button class="copy-btn" onclick="copyCode('py2')">📋 Copiar Código</button>
     </div>
 
+    <div class="lesson-card">
+      <h3>📦 Variáveis</h3>
+      <p>Variáveis guardam dados.</p>
+
+<pre><code id="py3">nome = "Ana"
+idade = 17
+print(nome)</code></pre>
+
+<button class="copy-btn" onclick="copyCode('py3')">📋 Copiar Código</button>
+    </div>
+
+    <div class="lesson-card">
+      <h3>⚙️ Funções</h3>
+      <p>Funções reutilizam código.</p>
+
+<pre><code id="py4">def ola():
+    print("Olá")
+
+ola()</code></pre>
+
+<button class="copy-btn" onclick="copyCode('py4')">📋 Copiar Código</button>
+    </div>
+
   </div>
 
   <!-- HTML -->
@@ -238,6 +305,24 @@ footer{
 <pre><code id="html1">&lt;h1&gt;Olá Mundo&lt;/h1&gt;</code></pre>
 
 <button class="copy-btn" onclick="copyCode('html1')">📋 Copiar Código</button>
+    </div>
+
+    <div class="lesson-card">
+      <h3>🖼️ Imagens</h3>
+      <p>Adicionar imagens no site.</p>
+
+<pre><code id="html2">&lt;img src="foto.png"&gt;</code></pre>
+
+<button class="copy-btn" onclick="copyCode('html2')">📋 Copiar Código</button>
+    </div>
+
+    <div class="lesson-card">
+      <h3>🔗 Links</h3>
+      <p>Links abrem páginas e sites.</p>
+
+<pre><code id="html3">&lt;a href="https://google.com"&gt;Google&lt;/a&gt;</code></pre>
+
+<button class="copy-btn" onclick="copyCode('html3')">📋 Copiar Código</button>
     </div>
 
   </div>
@@ -257,6 +342,28 @@ footer{
 <button class="copy-btn" onclick="copyCode('css1')">📋 Copiar Código</button>
     </div>
 
+    <div class="lesson-card">
+      <h3>📦 Padding</h3>
+      <p>Padding adiciona espaço dentro do elemento.</p>
+
+<pre><code id="css2">button{
+  padding:20px;
+}</code></pre>
+
+<button class="copy-btn" onclick="copyCode('css2')">📋 Copiar Código</button>
+    </div>
+
+    <div class="lesson-card">
+      <h3>✨ Hover</h3>
+      <p>Hover cria efeitos ao passar o dedo/rato.</p>
+
+<pre><code id="css3">button:hover{
+  transform:scale(1.1);
+}</code></pre>
+
+<button class="copy-btn" onclick="copyCode('css3')">📋 Copiar Código</button>
+    </div>
+
   </div>
 
   <!-- JS -->
@@ -269,6 +376,28 @@ footer{
 <pre><code id="js1">alert("Olá!")</code></pre>
 
 <button class="copy-btn" onclick="copyCode('js1')">📋 Copiar Código</button>
+    </div>
+
+    <div class="lesson-card">
+      <h3>🎮 Botões</h3>
+      <p>Adicionar ações ao clicar.</p>
+
+<pre><code id="js2">button.onclick = function(){
+  alert("Clicaste!")
+}</code></pre>
+
+<button class="copy-btn" onclick="copyCode('js2')">📋 Copiar Código</button>
+    </div>
+
+    <div class="lesson-card">
+      <h3>🔁 Loops</h3>
+      <p>Loops repetem código automaticamente.</p>
+
+<pre><code id="js3">for(let i=0;i<5;i++){
+  console.log(i)
+}</code></pre>
+
+<button class="copy-btn" onclick="copyCode('js3')">📋 Copiar Código</button>
     </div>
 
   </div>
@@ -311,4 +440,4 @@ function copyCode(id){
 </script>
 
 </body>
-  </html>
+                                                         </html>
